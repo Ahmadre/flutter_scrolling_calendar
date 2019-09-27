@@ -11,6 +11,7 @@ class ScrollingYearsCalendar extends StatefulWidget {
     @required this.firstDate,
     @required this.lastDate,
     @required this.currentDateColor,
+    this.monthTitleColor,
     this.yearTitleColor,
     this.highlightedDates,
     this.highlightedDateColor,
@@ -33,6 +34,7 @@ class ScrollingYearsCalendar extends StatefulWidget {
             monthNames == null || monthNames.length == DateTime.monthsPerYear,
             'monthNames must contain all months of the year');
 
+  final Color monthTitleColor;
   final Color yearTitleColor;
   final BuildContext context;
   final DateTime initialDate;
@@ -55,6 +57,7 @@ class _ScrollingYearsCalendarState extends State<ScrollingYearsCalendar> {
       context: context,
       year: year,
       currentDateColor: widget.currentDateColor,
+      monthTitleColor: widget.monthTitleColor,
       yearTitleColor: widget.yearTitleColor,
       highlightedDates: widget.highlightedDates,
       highlightedDateColor: widget.highlightedDateColor,

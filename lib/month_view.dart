@@ -11,12 +11,14 @@ class MonthView extends StatelessWidget {
     @required this.month,
     @required this.padding,
     @required this.currentDateColor,
+    this.monthTitleColor,
     this.highlightedDates,
     this.highlightedDateColor,
     this.monthNames,
     this.onMonthTap,
   });
 
+  final Color monthTitleColor;
   final BuildContext context;
   final int year;
   final int month;
@@ -85,6 +87,7 @@ class MonthView extends StatelessWidget {
           MonthTitle(
             month: month,
             monthNames: monthNames,
+            monthTitleColor: monthTitleColor
           ),
           Container(
             margin: const EdgeInsets.only(top: 8.0),
