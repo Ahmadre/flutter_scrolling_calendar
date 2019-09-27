@@ -8,6 +8,7 @@ class YearView extends StatelessWidget {
     @required this.context,
     @required this.year,
     @required this.currentDateColor,
+    this.dividerColor,
     this.monthDaysColor,
     this.monthTitleColor,
     this.yearTitleColor,
@@ -17,6 +18,7 @@ class YearView extends StatelessWidget {
     this.onMonthTap,
   });
 
+  final Color dividerColor;
   final Color monthDaysColor;
   final Color monthTitleColor;
   final Color yearTitleColor;
@@ -90,7 +92,7 @@ class YearView extends StatelessWidget {
               top: 8.0,
             ),
             child: Divider(
-              color: Colors.black26,
+              color: dividerColor ?? Colors.black26,
             ),
           ),
           Container(
