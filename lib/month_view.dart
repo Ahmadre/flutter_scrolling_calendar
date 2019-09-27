@@ -11,6 +11,7 @@ class MonthView extends StatelessWidget {
     @required this.month,
     @required this.padding,
     @required this.currentDateColor,
+    this.monthDaysColor,
     this.monthTitleColor,
     this.highlightedDates,
     this.highlightedDateColor,
@@ -18,6 +19,7 @@ class MonthView extends StatelessWidget {
     this.onMonthTap,
   });
 
+  final Color monthDaysColor;
   final Color monthTitleColor;
   final BuildContext context;
   final int year;
@@ -30,7 +32,7 @@ class MonthView extends StatelessWidget {
   final Function onMonthTap;
 
   Color getDayNumberColor(DateTime date) {
-    Color color;
+    Color color = monthDaysColor;
     if (isCurrentDate(date)) {
       color = currentDateColor;
     } else if (highlightedDates != null &&
