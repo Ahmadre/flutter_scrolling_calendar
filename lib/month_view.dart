@@ -32,7 +32,7 @@ class MonthView extends StatelessWidget {
   final Function onMonthTap;
 
   Color getDayNumberColor(DateTime date) {
-    Color color = monthDaysColor;
+    Color color;
     if (isCurrentDate(date)) {
       color = currentDateColor;
     } else if (highlightedDates != null &&
@@ -59,6 +59,7 @@ class MonthView extends StatelessWidget {
         DayNumber(
           day: day,
           color: color,
+          monthDaysColor: monthDaysColor
         ),
       );
 
