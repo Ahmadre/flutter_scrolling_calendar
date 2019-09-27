@@ -55,7 +55,7 @@ class _ScrollingYearsCalendarState extends State<ScrollingYearsCalendar> {
       context: context,
       year: year,
       currentDateColor: widget.currentDateColor,
-      yearTitleColor: yearTitleColor,
+      yearTitleColor: widget.yearTitleColor,
       highlightedDates: widget.highlightedDates,
       highlightedDateColor: widget.highlightedDateColor,
       monthNames: widget.monthNames,
