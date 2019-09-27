@@ -8,6 +8,7 @@ class YearView extends StatelessWidget {
     @required this.context,
     @required this.year,
     @required this.currentDateColor,
+    this.yearPadding,
     this.dividerColor,
     this.monthDaysColor,
     this.monthTitleColor,
@@ -18,6 +19,7 @@ class YearView extends StatelessWidget {
     this.onMonthTap,
   });
 
+  final EdgeInsets yearPadding;
   final Color dividerColor;
   final Color monthDaysColor;
   final Color monthTitleColor;
@@ -74,7 +76,7 @@ class YearView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: getYearViewHeight(context),
-      padding: const EdgeInsets.only(top: 16.0),
+      padding: yearPadding ?? EdgeInsets.zero,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -98,8 +100,8 @@ class YearView extends StatelessWidget {
           Container(
             margin: EdgeInsets.symmetric(
               horizontal: horizontalMargin - monthViewPadding,
-              vertical: 0.0,
-            ),
+              vertical: 6.0,
+            ),            
             child: buildYearMonths(context),
           ),
         ],
